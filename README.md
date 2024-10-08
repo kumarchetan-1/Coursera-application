@@ -27,66 +27,65 @@ To get started with the Coursera application, follow these steps:
    ```bash
    git clone https://github.com/kumarchetan-1/Coursera-application.git
    cd Coursera-application
+    ```
 
-	2.	Install Dependencies:
-	•	For the backend:
-
-cd backend
-npm install
-
+2.	Install Dependencies:
+	•For the backend:
+    ` cd backend
+    npm install`
 
 	•	For the frontend:
+    `cd frontend
+    npm install`
 
-cd frontend
-npm install
 
-
-	3.	Set Up Environment Variables:
+3.	Set Up Environment Variables:
 Create a .env file in the backend directory and set your environment variables (like MongoDB URI, JWT secret, etc.).
-	4.	Run the Application:
-	•	Start the backend server:
 
-cd backend
-npm start
+4.	Run the Application:
+	• Start the backend server:
 
+    ```bash
+    cd backend 
+    npm start
+    ```
 
-	•	Start the frontend development server:
+	• Start the frontend development server:
 
-cd frontend
-npm start
+    ```cd frontend
+    npm start 
 
-
-	5.	Access the Application:
+5.	Access the Application:
 Open your browser and go to http://localhost:3000 to access the application.
 
 Usage
 
-	1.	Create an account or log in to your existing account.
-	2.	Browse the courses available on the platform.
-	3.	Enroll in any course you are interested in.
-	4.	Track your progress on your profile.
+    1. Create an account or log in to your existing account.
+    2.	Browse the courses available on the platform.
+    3.	Enroll in any course you are interested in.
+    4.	Track your progress on your profile.
 
 Contributing
 
 Contributions are welcome! If you have suggestions for improvements or features, please fork the repository and create a pull request.
 
-	1.	Fork the repository.
-	2.	Create your feature branch:
+1. Fork the repository.
+2. Create your feature branch:
 
-git checkout -b feature/YourFeature
+`git checkout -b feature/YourFeature
+`
 
-
-	3.	Commit your changes:
+3. Commit your changes:
 
 git commit -m "Add some feature"
 
 
-	4.	Push to the branch:
+4.	Push to the branch:
 
 git push origin feature/YourFeature
 
 
-	5.	Open a pull request.
+5.	Open a pull request.
 
 License
 
@@ -94,8 +93,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Acknowledgements
 
-	•	Coursera for providing a wide range of online courses.
-	•	Node.js and React for their powerful frameworks.
+	• Coursera for providing a wide range of online courses.
+	• Node.js and React for their powerful frameworks.
 
 ### Tips for Customization
 - **Features**: Add or remove features based on the actual functionalities of your application.
