@@ -74,7 +74,16 @@ userRouter.post("/signin", async (req, res)=>{
             id: foundUser._id
         }, JWT_USER_SECRET)
 
-        res.status(200).json({ token })
+        // header based authentication
+        // res.status(200).json({ token })
+
+        // cookie based authentication 
+        res.status(200).cookie("token", token, { 
+            httpOnly: true,
+            secure: true,
+            sameSite: "strict",
+            maxAge: 15*24*60*60*60*1000 // valid for 15 days
+         })
     } catch (error) {
         res.status(500).json({
             message: "An error occured during signin. Please try again later.",
