@@ -30,29 +30,38 @@ To get started with the Coursera application, follow these steps:
     ```
 
 2.	Install Dependencies:
-	•For the backend:
-    ` cd backend
-    npm install`
+	
+- For the backend:
 
-	•	For the frontend:
-    `cd frontend
-    npm install`
+    ```bash
+    cd backend
+    npm install
+    ```
+
+- For the frontend:
+
+    ```bash
+    cd frontend
+    npm install
+    ```
 
 
 3.	Set Up Environment Variables:
 Create a .env file in the backend directory and set your environment variables (like MongoDB URI, JWT secret, etc.).
 
 4.	Run the Application:
-	• Start the backend server:
+
+- Start the backend server:
 
     ```bash
     cd backend 
-    npm start
+    npm start 
     ```
 
-	• Start the frontend development server:
+- Start the frontend development server:
 
-    ```cd frontend
+    ```bash
+    cd frontend
     npm start 
 
 5.	Access the Application:
@@ -61,9 +70,9 @@ Open your browser and go to http://localhost:3000 to access the application.
 Usage
 
     1. Create an account or log in to your existing account.
-    2.	Browse the courses available on the platform.
-    3.	Enroll in any course you are interested in.
-    4.	Track your progress on your profile.
+    2. Browse the courses available on the platform.
+    3. Enroll in any course you are interested in.
+    4. Track your progress on your profile.
 
 Contributing
 
@@ -71,19 +80,19 @@ Contributions are welcome! If you have suggestions for improvements or features,
 
 1. Fork the repository.
 2. Create your feature branch:
-
-`git checkout -b feature/YourFeature
-`
+    ```bash
+    git checkout -b feature/YourFeature
+    ```
 
 3. Commit your changes:
-
-git commit -m "Add some feature"
-
+    ```bash
+    git commit -m "Add some feature"
+    ```
 
 4.	Push to the branch:
-
-git push origin feature/YourFeature
-
+    ```bash
+    git push origin feature/YourFeature
+    ```
 
 5.	Open a pull request.
 
@@ -93,13 +102,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Acknowledgements
 
-	• Coursera for providing a wide range of online courses.
-	• Node.js and React for their powerful frameworks.
+- Coursera for providing a wide range of online courses.
+- Node.js and React for their powerful frameworks.
 
-### Tips for Customization
-- **Features**: Add or remove features based on the actual functionalities of your application.
-- **Technologies Used**: Update the technologies as per your implementation.
-- **Installation Steps**: Ensure the installation instructions are accurate for your project's structure.
-- **Usage Instructions**: Provide detailed steps if there are specific usage instructions or workflows within the app.
-
-Feel free to tweak any sections to better match your project!
