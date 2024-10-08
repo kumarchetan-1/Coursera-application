@@ -1,8 +1,6 @@
-const { userModel, courseModel, purchaseModel } = require("../db")
-const { Router } = require("express")
 
-const jwt = require("jsonwebtoken")
-const { JWT_ADMIN_SECRET } = require("../config")
+const { Router } = require("express")
+const { userModel, courseModel, purchaseModel } = require("../db")
 const { userMiddleware } = require("../middlewares/user")
 
 const courseRouter = Router()
@@ -26,7 +24,7 @@ courseRouter.post("/purchase", userMiddleware,  async (req, res)=>{
   }
 })
 
-courseRouter.post("/preview", async (req, res)=>{
+courseRouter.get("/preview", async (req, res)=>{
 
     try {
         const allCourses = await courseModel.find({})

@@ -9,8 +9,8 @@ const { adminMiddleware } = require("../middlewares/admin")
 const adminRouter = Router()
 
 const userSchema = z.object({
-    name: z.string().min(1).max(30),
-    email: z.min(1).max(4).email(),
+    name: z.string().min(1).max(40),
+    email: z.string().email().min(1).max(40),
     password: z
         .string()
         .min(8, { message: "Password should be atleast 8 characters long!" })
@@ -114,7 +114,7 @@ adminRouter.put("/course", adminMiddleware, async (req, res) => {
         const courseUpdated = await courseModel.updateOne(
             {
              creatorId: userId,
-             courseId
+             _id: courseId
             },
             {
             title,

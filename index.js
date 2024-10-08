@@ -1,8 +1,8 @@
 require("dotenv").config()
 const express = require("express")
-const { adminRouter } = require("../routes/admin")
-const { userRouter } = require("../routes/user")
-const { courseRouter } = require("../routes/course")
+const { adminRouter } = require("./routes/admin")
+const { userRouter } = require("./routes/user")
+const { courseRouter } = require("./routes/course")
 
 const PORT = process.env.PORT
 const app = express()

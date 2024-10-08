@@ -10,7 +10,7 @@ const userRouter = Router()
 
 const userSchema = z.object({
     name: z.string().min(1).max(30),
-    email: z.min(1).max(4).email(),
+    email: z.string().email().min(1).max(40),
     password: z
         .string()
         .min(8, { message: "Password should be atleast 8 characters long!" })
@@ -83,7 +83,7 @@ userRouter.post("/signin", async (req, res)=>{
     }
 })
 
-userRouter.post("/purchases", userMiddleware, async (req, res)=>{
+userRouter.get("/purchases", userMiddleware, async (req, res)=>{
     const userId = req.userId
     
     try {
