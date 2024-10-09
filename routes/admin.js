@@ -5,6 +5,14 @@ const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 const { JWT_ADMIN_SECRET } = require("../config")
 const { adminMiddleware } = require("../middlewares/admin")
+const rateLimit = require("express-rate-limit")
+
+const limiter = rateLimit({
+    windowMs: 15*60*1000,
+    max: 100,
+    message: "Too many requests from this IP, please try again after 15 mins.",
+    headers: true,
+})
 
 const adminRouter = Router()
 
@@ -49,7 +57,7 @@ adminRouter.post("/signup", async (req, res) => {
     }
 })
 
-adminRouter.post("/signin", async (req, res) => {
+adminRouter.post("/signin", limiter, async (req, res) => {
     const { email, password } = req.body
 
     try {
